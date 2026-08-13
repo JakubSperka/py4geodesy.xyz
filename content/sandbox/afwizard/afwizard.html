@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jakub Šperka">
 
-<title>🧙🏼‍♂️ AFWizard - 🚧 WIP – Programovanie v jazyku Python pre geodetov</title>
+<title>🧙🏼‍♂️ AFWizard – Programovanie v jazyku Python pre geodetov</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -294,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Prepnúť postrannú navigáciu" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🛝 Pieskovisko</li><li class="breadcrumb-item"><a href="../../../content/sandbox/afwizard/afwizard.html">🧙🏼‍♂️ AFWizard - 🚧 WIP</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🛝 Pieskovisko</li><li class="breadcrumb-item"><a href="../../../content/sandbox/afwizard/afwizard.html">🧙🏼‍♂️ AFWizard</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Prepnúť postrannú navigáciu" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -761,7 +796,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../content/sandbox/afwizard/afwizard.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">🧙🏼‍♂️ AFWizard - 🚧 WIP</span></a>
+ <span class="menu-text">🧙🏼‍♂️ AFWizard</span></a>
   </div>
 </li>
       </ul>
@@ -777,13 +812,37 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#úvod" id="toc-úvod" class="nav-link active" data-scroll-target="#úvod">Úvod</a></li>
-  <li><a href="#inštalácia-knižnice-afwizard" id="toc-inštalácia-knižnice-afwizard" class="nav-link" data-scroll-target="#inštalácia-knižnice-afwizard">🗃️ Inštalácia knižnice AfWizard</a></li>
+  <li><a href="#inštalácia-afwizard" id="toc-inštalácia-afwizard" class="nav-link" data-scroll-target="#inštalácia-afwizard">🗃️ Inštalácia AFWizard</a></li>
   <li><a href="#vstupné-dáta" id="toc-vstupné-dáta" class="nav-link" data-scroll-target="#vstupné-dáta">☁️ Vstupné dáta</a></li>
-  <li><a href="#postup" id="toc-postup" class="nav-link" data-scroll-target="#postup">⚙️ Postup</a>
+  <li><a href="#príprava-pracovného-prostredia" id="toc-príprava-pracovného-prostredia" class="nav-link" data-scroll-target="#príprava-pracovného-prostredia">⚙️ Príprava pracovného prostredia</a>
   <ul class="collapse">
-  <li><a href="#predspracovanie" id="toc-predspracovanie" class="nav-link" data-scroll-target="#predspracovanie">Predspracovanie</a></li>
-  <li><a href="#spracovanie" id="toc-spracovanie" class="nav-link" data-scroll-target="#spracovanie">Spracovanie</a></li>
+  <li><a href="#import-knižníc" id="toc-import-knižníc" class="nav-link" data-scroll-target="#import-knižníc">Import knižníc</a></li>
+  <li><a href="#nastavenie-cesty-k-lastools" id="toc-nastavenie-cesty-k-lastools" class="nav-link" data-scroll-target="#nastavenie-cesty-k-lastools">Nastavenie cesty k LAStools</a></li>
+  <li><a href="#nastavenie-pracovných-priečinkov" id="toc-nastavenie-pracovných-priečinkov" class="nav-link" data-scroll-target="#nastavenie-pracovných-priečinkov">Nastavenie pracovných priečinkov</a></li>
   </ul></li>
+  <li><a href="#predspracovanie-mračna-bodov" id="toc-predspracovanie-mračna-bodov" class="nav-link" data-scroll-target="#predspracovanie-mračna-bodov">Predspracovanie mračna bodov</a>
+  <ul class="collapse">
+  <li><a href="#načítanie-datasetu" id="toc-načítanie-datasetu" class="nav-link" data-scroll-target="#načítanie-datasetu">Načítanie datasetu</a></li>
+  <li><a href="#odstránenie-existujúcej-klasifikácie" id="toc-odstránenie-existujúcej-klasifikácie" class="nav-link" data-scroll-target="#odstránenie-existujúcej-klasifikácie">Odstránenie existujúcej klasifikácie</a></li>
+  </ul></li>
+  <li><a href="#priestorová-segmentácia" id="toc-priestorová-segmentácia" class="nav-link" data-scroll-target="#priestorová-segmentácia">Priestorová segmentácia</a>
+  <ul class="collapse">
+  <li><a href="#načítanie-segmentácie" id="toc-načítanie-segmentácie" class="nav-link" data-scroll-target="#načítanie-segmentácie">Načítanie segmentácie</a></li>
+  <li><a href="#vytvorenie-vzorového-subsetu" id="toc-vytvorenie-vzorového-subsetu" class="nav-link" data-scroll-target="#vytvorenie-vzorového-subsetu">Vytvorenie vzorového subsetu</a></li>
+  </ul></li>
+  <li><a href="#tvorba-filtrovacích-pipeline" id="toc-tvorba-filtrovacích-pipeline" class="nav-link" data-scroll-target="#tvorba-filtrovacích-pipeline">🧪 Tvorba filtrovacích pipeline</a>
+  <ul class="collapse">
+  <li><a href="#nízka-vegetácia" id="toc-nízka-vegetácia" class="nav-link" data-scroll-target="#nízka-vegetácia">Nízka vegetácia</a></li>
+  <li><a href="#vysoká-vegetácia" id="toc-vysoká-vegetácia" class="nav-link" data-scroll-target="#vysoká-vegetácia">Vysoká vegetácia</a></li>
+  <li><a href="#lom" id="toc-lom" class="nav-link" data-scroll-target="#lom">Lom</a></li>
+  </ul></li>
+  <li><a href="#prepojenie-filtrov-a-segmentov" id="toc-prepojenie-filtrov-a-segmentov" class="nav-link" data-scroll-target="#prepojenie-filtrov-a-segmentov">🧩 Prepojenie filtrov a segmentov</a>
+  <ul class="collapse">
+  <li><a href="#pridanie-vlastnej-knižnice-filtrov" id="toc-pridanie-vlastnej-knižnice-filtrov" class="nav-link" data-scroll-target="#pridanie-vlastnej-knižnice-filtrov">Pridanie vlastnej knižnice filtrov</a></li>
+  <li><a href="#výber-pipeline-z-knižnice" id="toc-výber-pipeline-z-knižnice" class="nav-link" data-scroll-target="#výber-pipeline-z-knižnice">Výber pipeline z knižnice</a></li>
+  <li><a href="#priradenie-filtrov-segmentom" id="toc-priradenie-filtrov-segmentom" class="nav-link" data-scroll-target="#priradenie-filtrov-segmentom">Priradenie filtrov segmentom</a></li>
+  </ul></li>
+  <li><a href="#spustenie-výsledného-spracovania" id="toc-spustenie-výsledného-spracovania" class="nav-link" data-scroll-target="#spustenie-výsledného-spracovania">🚀 Spustenie výsledného spracovania</a></li>
   <li><a href="#výstupy-a-záver" id="toc-výstupy-a-záver" class="nav-link" data-scroll-target="#výstupy-a-záver">📤 Výstupy a záver</a></li>
   <li><a href="#zdroje-a-užitočné-odkazy" id="toc-zdroje-a-užitočné-odkazy" class="nav-link" data-scroll-target="#zdroje-a-užitočné-odkazy">🔗 Zdroje a užitočné odkazy</a></li>
   </ul>
@@ -793,15 +852,15 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🛝 Pieskovisko</li><li class="breadcrumb-item"><a href="../../../content/sandbox/afwizard/afwizard.html">🧙🏼‍♂️ AFWizard - 🚧 WIP</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">🛝 Pieskovisko</li><li class="breadcrumb-item"><a href="../../../content/sandbox/afwizard/afwizard.html">🧙🏼‍♂️ AFWizard</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">🧙🏼‍♂️ AFWizard - 🚧 WIP</h1>
+<h1 class="title">🧙🏼‍♂️ AFWizard</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Python</div>
     <div class="quarto-category">Jupyter</div>
-    <div class="quarto-category">AfWizard</div>
+    <div class="quarto-category">AFWizard</div>
     <div class="quarto-category">QGIS</div>
-    <div class="quarto-category">LIDAR</div>
+    <div class="quarto-category">LiDAR</div>
     <div class="quarto-category">Mračná bodov</div>
     <div class="quarto-category">Filtrácia</div>
     <div class="quarto-category">DEM</div>
@@ -822,7 +881,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Publikované</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">19. marca 2026</p>
+      <p class="date">13. augusta 2026</p>
     </div>
   </div>
   
@@ -836,40 +895,362 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="úvod" class="level2">
 <h2 class="anchored" data-anchor-id="úvod">Úvod</h2>
-<p>Placeholder</p>
-<hr>
+<p><a href="https://afwizard.readthedocs.io/en/latest/">AFWizard</a> je nástroj určený na tvorbu, ladenie a aplikáciu filtrovacích pipeline pre LiDARové mračná bodov. Umožňuje kombinovať existujúce filtrovacie backendy, interaktívne nastavovať ich parametre a následne aplikovať rôzne filtre na rozdielne časti jedného datasetu.</p>
+<p>V tejto kapitole je ukázaný pracovný postup, pri ktorom sa jedno mračno bodov rozdelí pomocou pripravenej priestorovej segmentácie na oblasti s rozdielnym charakterom terénu. Pre jednotlivé typy oblastí sa vytvoria samostatné filtrovacie pipeline a tie sa následne priradia príslušným segmentom.</p>
+<p>Použitý pracovný postup:</p>
+<ol type="1">
+<li>načítanie mračna bodov,</li>
+<li>odstránenie existujúcej klasifikácie,</li>
+<li>načítanie priestorovej segmentácie,</li>
+<li>vytvorenie vzorových subsetov pre jednotlivé typy povrchu,</li>
+<li>interaktívne ladenie filtrovacích pipeline,</li>
+<li>uloženie filtrov do knižnice,</li>
+<li>priradenie filtrov jednotlivým segmentom,</li>
+<li>spustenie výsledného spracovania pomocou AFWizard CLI.</li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>Poznámka:</strong> Notebook pracuje s lokálnymi LAS/GeoJSON súbormi a s interaktívnymi prvkami AFWizard. Bunky preto spúšťaj postupne až po nastavení správnych ciest.</p>
+</blockquote>
 </section>
-<section id="inštalácia-knižnice-afwizard" class="level2">
-<h2 class="anchored" data-anchor-id="inštalácia-knižnice-afwizard">🗃️ Inštalácia knižnice AfWizard</h2>
-<p>Placeholder</p>
-<hr>
+<section id="inštalácia-afwizard" class="level2">
+<h2 class="anchored" data-anchor-id="inštalácia-afwizard">🗃️ Inštalácia AFWizard</h2>
+<p>Odporúčaným spôsobom inštalácie je samostatné prostredie <code>conda</code>.</p>
+<p>Nasledujúce príkazy spusti v <strong>Anaconda Prompt</strong>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">conda</span> create <span class="at">-n</span> afwizard</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">conda</span> activate afwizard</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge afwizard</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pre prácu v JupyterLab:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">conda</span> activate afwizard</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="ex">jupyter</span> lab</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>V tomto príklade sa používa lokálna inštalácia <strong>LAStools</strong> v adresári:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>C:/LAStools</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="vstupné-dáta" class="level2">
 <h2 class="anchored" data-anchor-id="vstupné-dáta">☁️ Vstupné dáta</h2>
-<p>Placeholder</p>
-<hr>
+<p>Workflow používa:</p>
+<ul>
+<li>mračno bodov vo formáte <strong>LAS</strong>,</li>
+<li>priestorovú segmentáciu vo formáte <strong>GeoJSON</strong>.</li>
+</ul>
+<p>Použité súbory:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>jtsk03_fixed_merged_lom_raztoka.las</span>
+<span id="cb4-2"><a href="#cb4-2"></a>segmentation.geojson</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Oba vstupy sú interpretované v CRS <code>EPSG:8353</code>.</p>
+<p>Odporúčaná štruktúra:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>projekt/</span>
+<span id="cb5-2"><a href="#cb5-2"></a>├── ntb_AFWizard.ipynb</span>
+<span id="cb5-3"><a href="#cb5-3"></a>├── segmentation.geojson</span>
+<span id="cb5-4"><a href="#cb5-4"></a>├── data/</span>
+<span id="cb5-5"><a href="#cb5-5"></a>│   ├── jtsk03_fixed_merged_lom_raztoka.las</span>
+<span id="cb5-6"><a href="#cb5-6"></a>│   ├── low_vegetation.las</span>
+<span id="cb5-7"><a href="#cb5-7"></a>│   ├── high_vegetation.las</span>
+<span id="cb5-8"><a href="#cb5-8"></a>│   └── quarry.las</span>
+<span id="cb5-9"><a href="#cb5-9"></a>└── filters/</span>
+<span id="cb5-10"><a href="#cb5-10"></a>    ├── low_vegetation.json</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    ├── high_vegetation.json</span>
+<span id="cb5-12"><a href="#cb5-12"></a>    └── quarry.json</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p><strong>Dôležité:</strong> Mračno bodov a segmentácia musia používať správny priestorový referenčný systém.</p>
+</blockquote>
 </section>
-<section id="postup" class="level2">
-<h2 class="anchored" data-anchor-id="postup">⚙️ Postup</h2>
-<p>Placeholder</p>
-<section id="predspracovanie" class="level3">
-<h3 class="anchored" data-anchor-id="predspracovanie">Predspracovanie</h3>
-<p>Placeholder</p>
+<section id="príprava-pracovného-prostredia" class="level2">
+<h2 class="anchored" data-anchor-id="príprava-pracovného-prostredia">⚙️ Príprava pracovného prostredia</h2>
+<section id="import-knižníc" class="level3">
+<h3 class="anchored" data-anchor-id="import-knižníc">Import knižníc</h3>
+<div id="61d33cff" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="im">import</span> afwizard <span class="im">as</span> af</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="spracovanie" class="level3">
-<h3 class="anchored" data-anchor-id="spracovanie">Spracovanie</h3>
-<p>Placeholder</p>
-<hr>
+<section id="nastavenie-cesty-k-lastools" class="level3">
+<h3 class="anchored" data-anchor-id="nastavenie-cesty-k-lastools">Nastavenie cesty k LAStools</h3>
+<div id="70a83ecd" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>af.set_lastools_directory(<span class="st">"C:/LAStools"</span>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
+<section id="nastavenie-pracovných-priečinkov" class="level3">
+<h3 class="anchored" data-anchor-id="nastavenie-pracovných-priečinkov">Nastavenie pracovných priečinkov</h3>
+<p>Priečinok <code>filters</code> použijeme pre JSON definície filtrov. Adresár <code>data</code> nastavíme ako dátový adresár AFWizard.</p>
+<div id="bd1edcd9" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>Path(<span class="st">"filters"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>af.set_data_directory(<span class="st">"data"</span>, create_dir<span class="op">=</span><span class="va">True</span>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="predspracovanie-mračna-bodov" class="level2">
+<h2 class="anchored" data-anchor-id="predspracovanie-mračna-bodov">Predspracovanie mračna bodov</h2>
+<section id="načítanie-datasetu" class="level3">
+<h3 class="anchored" data-anchor-id="načítanie-datasetu">Načítanie datasetu</h3>
+<div id="7b8039c7" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>dataset <span class="op">=</span> af.DataSet(</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    filename<span class="op">=</span><span class="st">"jtsk03_fixed_merged_lom_raztoka.las"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    spatial_reference<span class="op">=</span><span class="st">"EPSG:8353"</span>,</span>
+<span id="cb9-4"><a href="#cb9-4"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="odstránenie-existujúcej-klasifikácie" class="level3">
+<h3 class="anchored" data-anchor-id="odstránenie-existujúcej-klasifikácie">Odstránenie existujúcej klasifikácie</h3>
+<div id="f327080d" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>dataset <span class="op">=</span> af.remove_classification(dataset)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="priestorová-segmentácia" class="level2">
+<h2 class="anchored" data-anchor-id="priestorová-segmentácia">Priestorová segmentácia</h2>
+<section id="načítanie-segmentácie" class="level3">
+<h3 class="anchored" data-anchor-id="načítanie-segmentácie">Načítanie segmentácie</h3>
+<div id="3b1a4a49" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>segmentation <span class="op">=</span> af.load_segmentation(</span>
+<span id="cb11-2"><a href="#cb11-2"></a>    <span class="st">"segmentation.geojson"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3"></a>    spatial_reference<span class="op">=</span><span class="st">"EPSG:8353"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="vytvorenie-vzorového-subsetu" class="level3">
+<h3 class="anchored" data-anchor-id="vytvorenie-vzorového-subsetu">Vytvorenie vzorového subsetu</h3>
+<p>Dataset obmedzíme podľa pripravenej segmentácie. Tento krok sa podľa potreby opakuje pre jednotlivé typy povrchu.</p>
+<div id="95c70aca" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>restrict_dataset <span class="op">=</span> dataset.restrict(</span>
+<span id="cb12-2"><a href="#cb12-2"></a>    segmentation_overlay<span class="op">=</span>segmentation</span>
+<span id="cb12-3"><a href="#cb12-3"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Príklad uloženia subsetu pre vysokú vegetáciu:</p>
+<div id="27e332a9" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>saved_restriction <span class="op">=</span> restrict_dataset.save(</span>
+<span id="cb13-2"><a href="#cb13-2"></a>    <span class="st">"data/high_vegetation.las"</span>,</span>
+<span id="cb13-3"><a href="#cb13-3"></a>    overwrite<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb13-4"><a href="#cb13-4"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>V pôvodnom experimente boli pripravené tri vzorové datasety:</p>
+<ul>
+<li><code>low_vegetation.las</code> – nízka vegetácia,</li>
+<li><code>high_vegetation.las</code> – vysoká vegetácia,</li>
+<li><code>quarry.las</code> – lom.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Tip:</strong> Ladenie filtrov na menšom reprezentatívnom výreze je praktickejšie ako opakované testovanie na celom mračne bodov.</p>
+</blockquote>
+</section>
+</section>
+<section id="tvorba-filtrovacích-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="tvorba-filtrovacích-pipeline">🧪 Tvorba filtrovacích pipeline</h2>
+<p>AFWizard poskytuje interaktívne rozhranie <code>pipeline_tuning()</code>. Výslednú pipeline následne uložíme do JSON súboru.</p>
+<section id="nízka-vegetácia" class="level3">
+<h3 class="anchored" data-anchor-id="nízka-vegetácia">Nízka vegetácia</h3>
+<div id="ef4ce873" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>sample_low <span class="op">=</span> af.DataSet(</span>
+<span id="cb14-2"><a href="#cb14-2"></a>    filename<span class="op">=</span><span class="st">"data/low_vegetation.las"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3"></a>    spatial_reference<span class="op">=</span><span class="st">"EPSG:8353"</span>,</span>
+<span id="cb14-4"><a href="#cb14-4"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="5e7ccb79" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>pipeline_low <span class="op">=</span> af.pipeline_tuning(sample_low)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="e1d3f804" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>af.save_filter(</span>
+<span id="cb16-2"><a href="#cb16-2"></a>    pipeline_low,</span>
+<span id="cb16-3"><a href="#cb16-3"></a>    <span class="st">"filters/low_vegetation.json"</span>,</span>
+<span id="cb16-4"><a href="#cb16-4"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="vysoká-vegetácia" class="level3">
+<h3 class="anchored" data-anchor-id="vysoká-vegetácia">Vysoká vegetácia</h3>
+<div id="3133a854" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>sample_high <span class="op">=</span> af.DataSet(</span>
+<span id="cb17-2"><a href="#cb17-2"></a>    filename<span class="op">=</span><span class="st">"data/high_vegetation.las"</span>,</span>
+<span id="cb17-3"><a href="#cb17-3"></a>    spatial_reference<span class="op">=</span><span class="st">"EPSG:8353"</span>,</span>
+<span id="cb17-4"><a href="#cb17-4"></a>)</span>
+<span id="cb17-5"><a href="#cb17-5"></a></span>
+<span id="cb17-6"><a href="#cb17-6"></a>pipeline_high <span class="op">=</span> af.pipeline_tuning(sample_high)</span>
+<span id="cb17-7"><a href="#cb17-7"></a></span>
+<span id="cb17-8"><a href="#cb17-8"></a>af.save_filter(</span>
+<span id="cb17-9"><a href="#cb17-9"></a>    pipeline_high,</span>
+<span id="cb17-10"><a href="#cb17-10"></a>    <span class="st">"filters/high_vegetation.json"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="lom" class="level3">
+<h3 class="anchored" data-anchor-id="lom">Lom</h3>
+<div id="7421260d" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>sample_quarry <span class="op">=</span> af.DataSet(</span>
+<span id="cb18-2"><a href="#cb18-2"></a>    filename<span class="op">=</span><span class="st">"data/quarry.las"</span>,</span>
+<span id="cb18-3"><a href="#cb18-3"></a>    spatial_reference<span class="op">=</span><span class="st">"EPSG:8353"</span>,</span>
+<span id="cb18-4"><a href="#cb18-4"></a>)</span>
+<span id="cb18-5"><a href="#cb18-5"></a></span>
+<span id="cb18-6"><a href="#cb18-6"></a>pipeline_quarry <span class="op">=</span> af.pipeline_tuning(sample_quarry)</span>
+<span id="cb18-7"><a href="#cb18-7"></a></span>
+<span id="cb18-8"><a href="#cb18-8"></a>af.save_filter(</span>
+<span id="cb18-9"><a href="#cb18-9"></a>    pipeline_quarry,</span>
+<span id="cb18-10"><a href="#cb18-10"></a>    <span class="st">"filters/quarry.json"</span>,</span>
+<span id="cb18-11"><a href="#cb18-11"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Po dokončení tejto fázy obsahuje priečinok <code>filters</code> samostatné JSON definície filtrov pre jednotlivé typy oblastí.</p>
+</section>
+</section>
+<section id="prepojenie-filtrov-a-segmentov" class="level2">
+<h2 class="anchored" data-anchor-id="prepojenie-filtrov-a-segmentov">🧩 Prepojenie filtrov a segmentov</h2>
+<section id="pridanie-vlastnej-knižnice-filtrov" class="level3">
+<h3 class="anchored" data-anchor-id="pridanie-vlastnej-knižnice-filtrov">Pridanie vlastnej knižnice filtrov</h3>
+<div id="8f82dedc" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>af.add_filter_library(</span>
+<span id="cb19-2"><a href="#cb19-2"></a>    path<span class="op">=</span><span class="st">"filters"</span>,</span>
+<span id="cb19-3"><a href="#cb19-3"></a>    recursive<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb19-4"><a href="#cb19-4"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="výber-pipeline-z-knižnice" class="level3">
+<h3 class="anchored" data-anchor-id="výber-pipeline-z-knižnice">Výber pipeline z knižnice</h3>
+<div id="b69a0aa4" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>pipelines <span class="op">=</span> af.select_pipeline_from_library(<span class="st">"filters"</span>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="priradenie-filtrov-segmentom" class="level3">
+<h3 class="anchored" data-anchor-id="priradenie-filtrov-segmentom">Priradenie filtrov segmentom</h3>
+<div id="cb5b38df" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>assigned_segmentation <span class="op">=</span> af.assign_pipeline(</span>
+<span id="cb21-2"><a href="#cb21-2"></a>    dataset,</span>
+<span id="cb21-3"><a href="#cb21-3"></a>    segmentation<span class="op">=</span>segmentation,</span>
+<span id="cb21-4"><a href="#cb21-4"></a>    pipelines<span class="op">=</span>pipelines,</span>
+<span id="cb21-5"><a href="#cb21-5"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Uloženie segmentácie s priradenými pipeline:</p>
+<div id="e0df8615" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>assigned_segmentation.save(</span>
+<span id="cb22-2"><a href="#cb22-2"></a>    <span class="st">"data/dataset_segments_assigned.geojson"</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>)</span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<blockquote class="blockquote">
+<p><strong>Poznámka:</strong> Uložený GeoJSON predstavuje prepojenie medzi priestorovou časťou datasetu a zvolenou filtrovacou pipeline.</p>
+</blockquote>
+</section>
+</section>
+<section id="spustenie-výsledného-spracovania" class="level2">
+<h2 class="anchored" data-anchor-id="spustenie-výsledného-spracovania">🚀 Spustenie výsledného spracovania</h2>
+<p>Po pripravení datasetu, filtrov a segmentácie možno finálne spracovanie spustiť cez AFWizard CLI.</p>
+<p>V Jupyter Notebooku použijeme <code>!</code> pred shell príkazom.</p>
+<div id="77f65240" class="cell">
+<details open="" class="code-fold">
+<summary>Kód</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="op">!</span>afwizard <span class="op">--</span>dataset<span class="op">=</span>data<span class="op">/</span>jtsk03_fixed_merged_lom_raztoka.las <span class="op">--</span>dataset<span class="op">-</span>crs<span class="op">=</span>EPSG:<span class="dv">8353</span> <span class="op">--</span>segmentation<span class="op">=</span>data<span class="op">/</span>dataset_segments_assigned.geojson <span class="op">--</span>segmentation<span class="op">-</span>crs<span class="op">=</span>EPSG:<span class="dv">8353</span> <span class="op">--</span>output<span class="op">-</span><span class="bu">dir</span><span class="op">=</span>data<span class="op">/</span>output <span class="op">--</span>library filters <span class="op">--</span>lastools<span class="op">-</span><span class="bu">dir</span><span class="op">=</span><span class="st">"C:/LAStools"</span></span></code><button title="Kopírovať do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Použité argumenty:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Význam</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>--dataset</code></td>
+<td>vstupné mračno bodov</td>
+</tr>
+<tr class="even">
+<td><code>--dataset-crs</code></td>
+<td>CRS vstupného datasetu</td>
+</tr>
+<tr class="odd">
+<td><code>--segmentation</code></td>
+<td>GeoJSON s priestorovou segmentáciou a priradenými filtrami</td>
+</tr>
+<tr class="even">
+<td><code>--segmentation-crs</code></td>
+<td>CRS segmentácie</td>
+</tr>
+<tr class="odd">
+<td><code>--output-dir</code></td>
+<td>adresár pre výsledky spracovania</td>
+</tr>
+<tr class="even">
+<td><code>--library</code></td>
+<td>lokálna knižnica filtrov</td>
+</tr>
+<tr class="odd">
+<td><code>--lastools-dir</code></td>
+<td>cesta k inštalácii LAStools</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="výstupy-a-záver" class="level2">
 <h2 class="anchored" data-anchor-id="výstupy-a-záver">📤 Výstupy a záver</h2>
-<p>Placeholder</p>
-<hr>
+<p>Výsledkom workflow sú:</p>
+<ol type="1">
+<li><strong>vzorové LAS datasety</strong> použité pri ladení filtrov,</li>
+<li><strong>JSON definície filtrovacích pipeline</strong> uložené v adresári <code>filters</code>,</li>
+<li><strong>GeoJSON segmentácia s priradenými pipeline</strong>.</li>
+</ol>
+<p>Samotné filtrovanie sa následne vykonáva nad kompletným datasetom pomocou AFWizard CLI.</p>
+<p>Hlavnou výhodou postupu je možnosť <strong>priestorovo heterogénneho filtrovania</strong> – pre oblasti s rozdielnym charakterom možno vytvoriť samostatné pipeline a použiť ich iba tam, kde sú vhodné.</p>
 </section>
 <section id="zdroje-a-užitočné-odkazy" class="level2">
 <h2 class="anchored" data-anchor-id="zdroje-a-užitočné-odkazy">🔗 Zdroje a užitočné odkazy</h2>
-<p>Placeholder</p>
+<ul>
+<li><a href="https://afwizard.readthedocs.io/en/latest/">AFWizard – oficiálna dokumentácia</a></li>
+<li><a href="https://afwizard.readthedocs.io/en/latest/datasets.html">Práca s LiDAR datasetmi</a></li>
+<li><a href="https://afwizard.readthedocs.io/en/latest/filtering.html">Tvorba filtrovacích pipeline</a></li>
+<li><a href="https://afwizard.readthedocs.io/en/latest/libraries.html">Práca s knižnicami filtrov</a></li>
+<li><a href="https://pypi.org/project/afwizard/">AFWizard na PyPI</a></li>
+<li><a href="https://github.com/ssciwr/afwizard">AFWizard – GitHub</a></li>
+</ul>
 
 
 </section>
@@ -887,7 +1268,7 @@ ul.task-list li input[type="checkbox"] {
 
       <div class="modal-header bg-info text-white">
 
-        <h5 class="modal-title text-center w-100" id="newsModalLabel">📢 Novinky - 19.03.2026 📢</h5>
+        <h5 class="modal-title text-center w-100" id="newsModalLabel">📢 Novinky - 12.08.2026 📢</h5>
 
       </div>
 
@@ -907,13 +1288,7 @@ ul.task-list li input[type="checkbox"] {
 
 			<li>💻 Príprava dát, predspracovanie a práca s knižnicou</li>
 
-			<li>🎬 Inštruktážne video v SK a EN jazyku</li>
-
 		</ul>
-
-		<p><strong>📒 Programovanie 2 - Zadanie 2</strong></p>
-
-		<hr>
 
 		</div>
 

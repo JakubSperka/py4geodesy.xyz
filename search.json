@@ -807,85 +807,145 @@
   {
     "objectID": "content/sandbox/afwizard/afwizard.html",
     "href": "content/sandbox/afwizard/afwizard.html",
-    "title": "🧙🏼‍♂️ AFWizard - 🚧 WIP",
+    "title": "🧙🏼‍♂️ AFWizard",
     "section": "",
-    "text": "Placeholder",
+    "text": "AFWizard je nástroj určený na tvorbu, ladenie a aplikáciu filtrovacích pipeline pre LiDARové mračná bodov. Umožňuje kombinovať existujúce filtrovacie backendy, interaktívne nastavovať ich parametre a následne aplikovať rôzne filtre na rozdielne časti jedného datasetu.\nV tejto kapitole je ukázaný pracovný postup, pri ktorom sa jedno mračno bodov rozdelí pomocou pripravenej priestorovej segmentácie na oblasti s rozdielnym charakterom terénu. Pre jednotlivé typy oblastí sa vytvoria samostatné filtrovacie pipeline a tie sa následne priradia príslušným segmentom.\nPoužitý pracovný postup:\n\nnačítanie mračna bodov,\nodstránenie existujúcej klasifikácie,\nnačítanie priestorovej segmentácie,\nvytvorenie vzorových subsetov pre jednotlivé typy povrchu,\ninteraktívne ladenie filtrovacích pipeline,\nuloženie filtrov do knižnice,\npriradenie filtrov jednotlivým segmentom,\nspustenie výsledného spracovania pomocou AFWizard CLI.\n\n\nPoznámka: Notebook pracuje s lokálnymi LAS/GeoJSON súbormi a s interaktívnymi prvkami AFWizard. Bunky preto spúšťaj postupne až po nastavení správnych ciest.",
     "crumbs": [
       "🏡 Domov",
       "🛝 Pieskovisko",
-      "🧙🏼‍♂️ AFWizard - 🚧 WIP"
+      "🧙🏼‍♂️ AFWizard"
     ]
   },
   {
     "objectID": "content/sandbox/afwizard/afwizard.html#úvod",
     "href": "content/sandbox/afwizard/afwizard.html#úvod",
-    "title": "🧙🏼‍♂️ AFWizard - 🚧 WIP",
+    "title": "🧙🏼‍♂️ AFWizard",
     "section": "",
-    "text": "Placeholder",
+    "text": "AFWizard je nástroj určený na tvorbu, ladenie a aplikáciu filtrovacích pipeline pre LiDARové mračná bodov. Umožňuje kombinovať existujúce filtrovacie backendy, interaktívne nastavovať ich parametre a následne aplikovať rôzne filtre na rozdielne časti jedného datasetu.\nV tejto kapitole je ukázaný pracovný postup, pri ktorom sa jedno mračno bodov rozdelí pomocou pripravenej priestorovej segmentácie na oblasti s rozdielnym charakterom terénu. Pre jednotlivé typy oblastí sa vytvoria samostatné filtrovacie pipeline a tie sa následne priradia príslušným segmentom.\nPoužitý pracovný postup:\n\nnačítanie mračna bodov,\nodstránenie existujúcej klasifikácie,\nnačítanie priestorovej segmentácie,\nvytvorenie vzorových subsetov pre jednotlivé typy povrchu,\ninteraktívne ladenie filtrovacích pipeline,\nuloženie filtrov do knižnice,\npriradenie filtrov jednotlivým segmentom,\nspustenie výsledného spracovania pomocou AFWizard CLI.\n\n\nPoznámka: Notebook pracuje s lokálnymi LAS/GeoJSON súbormi a s interaktívnymi prvkami AFWizard. Bunky preto spúšťaj postupne až po nastavení správnych ciest.",
     "crumbs": [
       "🏡 Domov",
       "🛝 Pieskovisko",
-      "🧙🏼‍♂️ AFWizard - 🚧 WIP"
+      "🧙🏼‍♂️ AFWizard"
     ]
   },
   {
-    "objectID": "content/sandbox/afwizard/afwizard.html#inštalácia-knižnice-afwizard",
-    "href": "content/sandbox/afwizard/afwizard.html#inštalácia-knižnice-afwizard",
-    "title": "🧙🏼‍♂️ AFWizard - 🚧 WIP",
-    "section": "🗃️ Inštalácia knižnice AfWizard",
-    "text": "🗃️ Inštalácia knižnice AfWizard\nPlaceholder",
+    "objectID": "content/sandbox/afwizard/afwizard.html#inštalácia-afwizard",
+    "href": "content/sandbox/afwizard/afwizard.html#inštalácia-afwizard",
+    "title": "🧙🏼‍♂️ AFWizard",
+    "section": "🗃️ Inštalácia AFWizard",
+    "text": "🗃️ Inštalácia AFWizard\nOdporúčaným spôsobom inštalácie je samostatné prostredie conda.\nNasledujúce príkazy spusti v Anaconda Prompt:\nconda create -n afwizard\nconda activate afwizard\nconda install -c conda-forge afwizard\nPre prácu v JupyterLab:\nconda activate afwizard\njupyter lab\nV tomto príklade sa používa lokálna inštalácia LAStools v adresári:\nC:/LAStools",
     "crumbs": [
       "🏡 Domov",
       "🛝 Pieskovisko",
-      "🧙🏼‍♂️ AFWizard - 🚧 WIP"
+      "🧙🏼‍♂️ AFWizard"
     ]
   },
   {
     "objectID": "content/sandbox/afwizard/afwizard.html#vstupné-dáta",
     "href": "content/sandbox/afwizard/afwizard.html#vstupné-dáta",
-    "title": "🧙🏼‍♂️ AFWizard - 🚧 WIP",
+    "title": "🧙🏼‍♂️ AFWizard",
     "section": "☁️ Vstupné dáta",
-    "text": "☁️ Vstupné dáta\nPlaceholder",
+    "text": "☁️ Vstupné dáta\nWorkflow používa:\n\nmračno bodov vo formáte LAS,\npriestorovú segmentáciu vo formáte GeoJSON.\n\nPoužité súbory:\njtsk03_fixed_merged_lom_raztoka.las\nsegmentation.geojson\nOba vstupy sú interpretované v CRS EPSG:8353.\nOdporúčaná štruktúra:\nprojekt/\n├── ntb_AFWizard.ipynb\n├── segmentation.geojson\n├── data/\n│   ├── jtsk03_fixed_merged_lom_raztoka.las\n│   ├── low_vegetation.las\n│   ├── high_vegetation.las\n│   └── quarry.las\n└── filters/\n    ├── low_vegetation.json\n    ├── high_vegetation.json\n    └── quarry.json\n\nDôležité: Mračno bodov a segmentácia musia používať správny priestorový referenčný systém.",
     "crumbs": [
       "🏡 Domov",
       "🛝 Pieskovisko",
-      "🧙🏼‍♂️ AFWizard - 🚧 WIP"
+      "🧙🏼‍♂️ AFWizard"
     ]
   },
   {
-    "objectID": "content/sandbox/afwizard/afwizard.html#postup",
-    "href": "content/sandbox/afwizard/afwizard.html#postup",
-    "title": "🧙🏼‍♂️ AFWizard - 🚧 WIP",
-    "section": "⚙️ Postup",
-    "text": "⚙️ Postup\nPlaceholder\n\nPredspracovanie\nPlaceholder\n\n\nSpracovanie\nPlaceholder",
+    "objectID": "content/sandbox/afwizard/afwizard.html#príprava-pracovného-prostredia",
+    "href": "content/sandbox/afwizard/afwizard.html#príprava-pracovného-prostredia",
+    "title": "🧙🏼‍♂️ AFWizard",
+    "section": "⚙️ Príprava pracovného prostredia",
+    "text": "⚙️ Príprava pracovného prostredia\n\nImport knižníc\n\n\nKód\nfrom pathlib import Path\n\nimport afwizard as af\n\n\n\n\nNastavenie cesty k LAStools\n\n\nKód\naf.set_lastools_directory(\"C:/LAStools\")\n\n\n\n\nNastavenie pracovných priečinkov\nPriečinok filters použijeme pre JSON definície filtrov. Adresár data nastavíme ako dátový adresár AFWizard.\n\n\nKód\nPath(\"filters\").mkdir(exist_ok=True)\naf.set_data_directory(\"data\", create_dir=True)",
     "crumbs": [
       "🏡 Domov",
       "🛝 Pieskovisko",
-      "🧙🏼‍♂️ AFWizard - 🚧 WIP"
+      "🧙🏼‍♂️ AFWizard"
+    ]
+  },
+  {
+    "objectID": "content/sandbox/afwizard/afwizard.html#predspracovanie-mračna-bodov",
+    "href": "content/sandbox/afwizard/afwizard.html#predspracovanie-mračna-bodov",
+    "title": "🧙🏼‍♂️ AFWizard",
+    "section": "Predspracovanie mračna bodov",
+    "text": "Predspracovanie mračna bodov\n\nNačítanie datasetu\n\n\nKód\ndataset = af.DataSet(\n    filename=\"jtsk03_fixed_merged_lom_raztoka.las\",\n    spatial_reference=\"EPSG:8353\",\n)\n\n\n\n\nOdstránenie existujúcej klasifikácie\n\n\nKód\ndataset = af.remove_classification(dataset)",
+    "crumbs": [
+      "🏡 Domov",
+      "🛝 Pieskovisko",
+      "🧙🏼‍♂️ AFWizard"
+    ]
+  },
+  {
+    "objectID": "content/sandbox/afwizard/afwizard.html#priestorová-segmentácia",
+    "href": "content/sandbox/afwizard/afwizard.html#priestorová-segmentácia",
+    "title": "🧙🏼‍♂️ AFWizard",
+    "section": "Priestorová segmentácia",
+    "text": "Priestorová segmentácia\n\nNačítanie segmentácie\n\n\nKód\nsegmentation = af.load_segmentation(\n    \"segmentation.geojson\",\n    spatial_reference=\"EPSG:8353\",\n)\n\n\n\n\nVytvorenie vzorového subsetu\nDataset obmedzíme podľa pripravenej segmentácie. Tento krok sa podľa potreby opakuje pre jednotlivé typy povrchu.\n\n\nKód\nrestrict_dataset = dataset.restrict(\n    segmentation_overlay=segmentation\n)\n\n\nPríklad uloženia subsetu pre vysokú vegetáciu:\n\n\nKód\nsaved_restriction = restrict_dataset.save(\n    \"data/high_vegetation.las\",\n    overwrite=True,\n)\n\n\nV pôvodnom experimente boli pripravené tri vzorové datasety:\n\nlow_vegetation.las – nízka vegetácia,\nhigh_vegetation.las – vysoká vegetácia,\nquarry.las – lom.\n\n\nTip: Ladenie filtrov na menšom reprezentatívnom výreze je praktickejšie ako opakované testovanie na celom mračne bodov.",
+    "crumbs": [
+      "🏡 Domov",
+      "🛝 Pieskovisko",
+      "🧙🏼‍♂️ AFWizard"
+    ]
+  },
+  {
+    "objectID": "content/sandbox/afwizard/afwizard.html#tvorba-filtrovacích-pipeline",
+    "href": "content/sandbox/afwizard/afwizard.html#tvorba-filtrovacích-pipeline",
+    "title": "🧙🏼‍♂️ AFWizard",
+    "section": "🧪 Tvorba filtrovacích pipeline",
+    "text": "🧪 Tvorba filtrovacích pipeline\nAFWizard poskytuje interaktívne rozhranie pipeline_tuning(). Výslednú pipeline následne uložíme do JSON súboru.\n\nNízka vegetácia\n\n\nKód\nsample_low = af.DataSet(\n    filename=\"data/low_vegetation.las\",\n    spatial_reference=\"EPSG:8353\",\n)\n\n\n\n\nKód\npipeline_low = af.pipeline_tuning(sample_low)\n\n\n\n\nKód\naf.save_filter(\n    pipeline_low,\n    \"filters/low_vegetation.json\",\n)\n\n\n\n\nVysoká vegetácia\n\n\nKód\nsample_high = af.DataSet(\n    filename=\"data/high_vegetation.las\",\n    spatial_reference=\"EPSG:8353\",\n)\n\npipeline_high = af.pipeline_tuning(sample_high)\n\naf.save_filter(\n    pipeline_high,\n    \"filters/high_vegetation.json\",\n)\n\n\n\n\nLom\n\n\nKód\nsample_quarry = af.DataSet(\n    filename=\"data/quarry.las\",\n    spatial_reference=\"EPSG:8353\",\n)\n\npipeline_quarry = af.pipeline_tuning(sample_quarry)\n\naf.save_filter(\n    pipeline_quarry,\n    \"filters/quarry.json\",\n)\n\n\nPo dokončení tejto fázy obsahuje priečinok filters samostatné JSON definície filtrov pre jednotlivé typy oblastí.",
+    "crumbs": [
+      "🏡 Domov",
+      "🛝 Pieskovisko",
+      "🧙🏼‍♂️ AFWizard"
+    ]
+  },
+  {
+    "objectID": "content/sandbox/afwizard/afwizard.html#prepojenie-filtrov-a-segmentov",
+    "href": "content/sandbox/afwizard/afwizard.html#prepojenie-filtrov-a-segmentov",
+    "title": "🧙🏼‍♂️ AFWizard",
+    "section": "🧩 Prepojenie filtrov a segmentov",
+    "text": "🧩 Prepojenie filtrov a segmentov\n\nPridanie vlastnej knižnice filtrov\n\n\nKód\naf.add_filter_library(\n    path=\"filters\",\n    recursive=False,\n)\n\n\n\n\nVýber pipeline z knižnice\n\n\nKód\npipelines = af.select_pipeline_from_library(\"filters\")\n\n\n\n\nPriradenie filtrov segmentom\n\n\nKód\nassigned_segmentation = af.assign_pipeline(\n    dataset,\n    segmentation=segmentation,\n    pipelines=pipelines,\n)\n\n\nUloženie segmentácie s priradenými pipeline:\n\n\nKód\nassigned_segmentation.save(\n    \"data/dataset_segments_assigned.geojson\"\n)\n\n\n\nPoznámka: Uložený GeoJSON predstavuje prepojenie medzi priestorovou časťou datasetu a zvolenou filtrovacou pipeline.",
+    "crumbs": [
+      "🏡 Domov",
+      "🛝 Pieskovisko",
+      "🧙🏼‍♂️ AFWizard"
+    ]
+  },
+  {
+    "objectID": "content/sandbox/afwizard/afwizard.html#spustenie-výsledného-spracovania",
+    "href": "content/sandbox/afwizard/afwizard.html#spustenie-výsledného-spracovania",
+    "title": "🧙🏼‍♂️ AFWizard",
+    "section": "🚀 Spustenie výsledného spracovania",
+    "text": "🚀 Spustenie výsledného spracovania\nPo pripravení datasetu, filtrov a segmentácie možno finálne spracovanie spustiť cez AFWizard CLI.\nV Jupyter Notebooku použijeme ! pred shell príkazom.\n\n\nKód\n!afwizard --dataset=data/jtsk03_fixed_merged_lom_raztoka.las --dataset-crs=EPSG:8353 --segmentation=data/dataset_segments_assigned.geojson --segmentation-crs=EPSG:8353 --output-dir=data/output --library filters --lastools-dir=\"C:/LAStools\"\n\n\nPoužité argumenty:\n\n\n\n\n\n\n\nParameter\nVýznam\n\n\n\n\n--dataset\nvstupné mračno bodov\n\n\n--dataset-crs\nCRS vstupného datasetu\n\n\n--segmentation\nGeoJSON s priestorovou segmentáciou a priradenými filtrami\n\n\n--segmentation-crs\nCRS segmentácie\n\n\n--output-dir\nadresár pre výsledky spracovania\n\n\n--library\nlokálna knižnica filtrov\n\n\n--lastools-dir\ncesta k inštalácii LAStools",
+    "crumbs": [
+      "🏡 Domov",
+      "🛝 Pieskovisko",
+      "🧙🏼‍♂️ AFWizard"
     ]
   },
   {
     "objectID": "content/sandbox/afwizard/afwizard.html#výstupy-a-záver",
     "href": "content/sandbox/afwizard/afwizard.html#výstupy-a-záver",
-    "title": "🧙🏼‍♂️ AFWizard - 🚧 WIP",
+    "title": "🧙🏼‍♂️ AFWizard",
     "section": "📤 Výstupy a záver",
-    "text": "📤 Výstupy a záver\nPlaceholder",
+    "text": "📤 Výstupy a záver\nVýsledkom workflow sú:\n\nvzorové LAS datasety použité pri ladení filtrov,\nJSON definície filtrovacích pipeline uložené v adresári filters,\nGeoJSON segmentácia s priradenými pipeline.\n\nSamotné filtrovanie sa následne vykonáva nad kompletným datasetom pomocou AFWizard CLI.\nHlavnou výhodou postupu je možnosť priestorovo heterogénneho filtrovania – pre oblasti s rozdielnym charakterom možno vytvoriť samostatné pipeline a použiť ich iba tam, kde sú vhodné.",
     "crumbs": [
       "🏡 Domov",
       "🛝 Pieskovisko",
-      "🧙🏼‍♂️ AFWizard - 🚧 WIP"
+      "🧙🏼‍♂️ AFWizard"
     ]
   },
   {
     "objectID": "content/sandbox/afwizard/afwizard.html#zdroje-a-užitočné-odkazy",
     "href": "content/sandbox/afwizard/afwizard.html#zdroje-a-užitočné-odkazy",
-    "title": "🧙🏼‍♂️ AFWizard - 🚧 WIP",
+    "title": "🧙🏼‍♂️ AFWizard",
     "section": "🔗 Zdroje a užitočné odkazy",
-    "text": "🔗 Zdroje a užitočné odkazy\nPlaceholder",
+    "text": "🔗 Zdroje a užitočné odkazy\n\nAFWizard – oficiálna dokumentácia\nPráca s LiDAR datasetmi\nTvorba filtrovacích pipeline\nPráca s knižnicami filtrov\nAFWizard na PyPI\nAFWizard – GitHub",
     "crumbs": [
       "🏡 Domov",
       "🛝 Pieskovisko",
-      "🧙🏼‍♂️ AFWizard - 🚧 WIP"
+      "🧙🏼‍♂️ AFWizard"
     ]
   },
   {
