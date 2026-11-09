@@ -234,14 +234,21 @@
     "href": "index.html",
     "title": "Programovanie v jazyku Python pre geodetov",
     "section": "",
-    "text": "Táto stránka predstavuje centrálnu platformu pre rozvoj programátorských kompetencií v jazyku Python v rámci študijného programu Geodézia a kartografia. Obsahovo nadväzuje na predmety:\n\nProgramovanie 1\nProgramovanie 2\nMatematická kartografia\nObjektovo orientované programovanie v geodézii\n\n, pričom vytvára jednotné metodické zázemie pre podporu ich výuky.\nProgramovanie je tu chápané nie ako izolovaný predmet, ale ako univerzálny nástroj na riešenie odborných úloh – od základnej algoritmizácie až po numerické modelovanie, spracovanie dát a tvorbu vlastných analytických nástrojov. Stránka funguje ako online študijný materiál, ktorý systematicky buduje znalosti jazyka Python a jeho aplikácie v technických, matematických a geodetických kontextoch."
+    "text": "Python · Geodézia · Kartografia\n\n\n\n\nVitajte na py4geodesy.xyz. Objavte Python ako praktický nástroj na prácu s dátami, matematiku a geodetické výpočty.\n\n\nZačať so základmi → Prehľad učiva"
   },
   {
-    "objectID": "index.html#vitajte-na-stránke-py4geodesy.xyz",
-    "href": "index.html#vitajte-na-stránke-py4geodesy.xyz",
+    "objectID": "index.html#od-prvého-riadka-kódu-k-vlastným-výpočtom",
+    "href": "index.html#od-prvého-riadka-kódu-k-vlastným-výpočtom",
     "title": "Programovanie v jazyku Python pre geodetov",
     "section": "",
-    "text": "Táto stránka predstavuje centrálnu platformu pre rozvoj programátorských kompetencií v jazyku Python v rámci študijného programu Geodézia a kartografia. Obsahovo nadväzuje na predmety:\n\nProgramovanie 1\nProgramovanie 2\nMatematická kartografia\nObjektovo orientované programovanie v geodézii\n\n, pričom vytvára jednotné metodické zázemie pre podporu ich výuky.\nProgramovanie je tu chápané nie ako izolovaný predmet, ale ako univerzálny nástroj na riešenie odborných úloh – od základnej algoritmizácie až po numerické modelovanie, spracovanie dát a tvorbu vlastných analytických nástrojov. Stránka funguje ako online študijný materiál, ktorý systematicky buduje znalosti jazyka Python a jeho aplikácie v technických, matematických a geodetických kontextoch."
+    "text": "Vitajte na py4geodesy.xyz. Objavte Python ako praktický nástroj na prácu s dátami, matematiku a geodetické výpočty.\n\n\nZačať so základmi → Prehľad učiva"
+  },
+  {
+    "objectID": "index.html#python-pre-geodetov",
+    "href": "index.html#python-pre-geodetov",
+    "title": "Programovanie v jazyku Python pre geodetov",
+    "section": "Python pre geodetov",
+    "text": "Python pre geodetov\nTáto stránka predstavuje centrálnu platformu pre rozvoj programátorských kompetencií v jazyku Python v rámci študijného programu Geodézia a kartografia. Obsahovo nadväzuje na predmety:\n\n\nProgramovanie 1\nZáklady Pythonu, dátové a riadiace štruktúry, funkcie.\n\n\nProgramovanie 2\nNumPy, SymPy, Matplotlib a Pandas v praktických úlohách.\n\n\nMatematická kartografia\nVýpočty a nástroje pre kartografické úlohy.\n\n\nObjektovo orientované programovanie v geodézii\nZáklady štruktúrovaného a objektovo orientovaného prístupu.\n\n\nStránka vytvára jednotné metodické zázemie pre podporu ich výučby.\nProgramovanie je tu chápané nie ako izolovaný predmet, ale ako univerzálny nástroj na riešenie odborných úloh – od základnej algoritmizácie až po numerické modelovanie, spracovanie dát a tvorbu vlastných analytických nástrojov. Stránka funguje ako online študijný materiál, ktorý systematicky buduje znalosti jazyka Python a jeho aplikácie v technických, matematických a geodetických kontextoch."
   },
   {
     "objectID": "index.html#čo-si-osvojíte",
@@ -711,7 +718,7 @@
     "href": "content/sympy_derivovanie_integrovanie.html",
     "title": "Derivácie a integrály",
     "section": "",
-    "text": "Balíček SymPy umožňuje symbolicky derivovať a integrovať výrazy.\nKľúčové funkcie: - Derivácie: diff, Derivative (formálny objekt), doit()\n- Integrály: integrate, Integral (formálny objekt), doit()\n- Hodnotenie: subs, evalf / N —",
+    "text": "Balíček SymPy umožňuje symbolicky derivovať a integrovať výrazy.\nKľúčové funkcie: - Derivácie: diff, Derivative (formálny objekt), doit()\n- Integrály: integrate, Integral (formálny objekt), doit()\n- Hodnotenie: subs, evalf / N",
     "crumbs": [
       "🏡 Domov",
       "🖥️ Programovanie 2",
@@ -725,7 +732,7 @@
     "href": "content/sympy_derivovanie_integrovanie.html#úvod",
     "title": "Derivácie a integrály",
     "section": "",
-    "text": "Balíček SymPy umožňuje symbolicky derivovať a integrovať výrazy.\nKľúčové funkcie: - Derivácie: diff, Derivative (formálny objekt), doit()\n- Integrály: integrate, Integral (formálny objekt), doit()\n- Hodnotenie: subs, evalf / N —",
+    "text": "Balíček SymPy umožňuje symbolicky derivovať a integrovať výrazy.\nKľúčové funkcie: - Derivácie: diff, Derivative (formálny objekt), doit()\n- Integrály: integrate, Integral (formálny objekt), doit()\n- Hodnotenie: subs, evalf / N",
     "crumbs": [
       "🏡 Domov",
       "🖥️ Programovanie 2",

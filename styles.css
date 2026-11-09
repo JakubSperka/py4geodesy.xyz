@@ -1,0 +1,104 @@
+/* Keep the wider navigation and align the reading column to the left. */
+@media (min-width: 1200px) {
+  body.docked #quarto-content.page-columns {
+    --py-rail-width: clamp(260px, 19vw, 320px);
+    grid-template-columns:
+      [screen-start] 16px
+      [screen-start-inset page-start page-start-inset body-start-outset] var(--py-rail-width)
+      [body-start] 24px
+      [body-content-start] minmax(0, 900px)
+      [body-content-end] 24px
+      [body-end body-end-outset] 220px
+      [page-end-inset page-end screen-end-inset] minmax(16px, 1fr)
+      [screen-end];
+  }
+  body.docked #quarto-sidebar {
+    grid-column: page-start / body-start;
+  }
+  #quarto-sidebar .sidebar-item-text { white-space: normal; overflow-wrap: anywhere; }
+}
+
+/* Shared visual refinements for Quarto's light and dark themes. */
+body {
+  --py-accent: #176b78;
+  --py-accent-soft: #eaf4f5;
+  --py-surface: #f6f8fa;
+  --py-border: #dbe4e9;
+  --py-muted: #586b78;
+  --py-ink: #203b4b;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.75;
+}
+body.quarto-dark {
+  --py-accent: #83ced5;
+  --py-accent-soft: #20383e;
+  --py-surface: #252e35;
+  --py-border: #43535e;
+  --py-muted: #b0c0cc;
+  --py-ink: #e3edf3;
+}
+h1, h2, h3, h4 { color: var(--py-ink); font-weight: 650; line-height: 1.3; }
+h1 { letter-spacing: -.035em; }
+main h2 { margin-top: 2.4rem; padding-bottom: .65rem; border-bottom-color: var(--py-border); letter-spacing: -.02em; }
+main p, main li { text-wrap: pretty; }
+main a:not(.btn):not(.anchorjs-link) { color: var(--py-accent); text-underline-offset: .2em; }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid var(--py-accent); outline-offset: 4px;
+}
+.navbar { box-shadow: 0 3px 15px #132c3d14; padding-block: .65rem; }
+#quarto-header .navbar { background: #203b4b !important; }
+.navbar-brand { font-weight: 600; letter-spacing: -.02em; }
+.navbar-logo { max-height: 34px; margin-right: .5rem; }
+.navbar .nav-link { border-radius: .4rem; }
+.navbar .nav-link:hover { background: #ffffff12; }
+#quarto-announcement { font-size: .84rem; line-height: 1.6; }
+#quarto-sidebar { border-right: 1px solid var(--py-border); background: var(--py-surface); }
+.sidebar-navigation .sidebar-item { line-height: 1.5; }
+.sidebar-navigation .sidebar-item-container { padding-block: .25rem; }
+.sidebar-navigation .sidebar-link { border-radius: .35rem; padding: .2rem .4rem; }
+.sidebar-navigation .sidebar-link:hover { background: var(--py-accent-soft); }
+.sidebar-navigation .sidebar-link.active { color: var(--py-accent); background: var(--py-accent-soft); font-weight: 650; }
+#TOC { font-size: .85rem; line-height: 1.6; }
+#TOC .nav-link.active { color: var(--py-accent) !important; border-left-color: var(--py-accent) !important; }
+.quarto-title-meta { color: var(--py-muted); font-size: .85rem; }
+div.sourceCode { border: 1px solid var(--py-border); border-radius: .6rem; }
+pre.sourceCode { padding: 1rem; }
+blockquote { border-left: 3px solid var(--py-accent); background: var(--py-accent-soft); padding: 1rem 1.25rem; border-radius: 0 .6rem .6rem 0; color: var(--py-ink); }
+blockquote p:last-child { margin-bottom: 0; }
+main hr { border-color: var(--py-border); opacity: .7; margin-block: 2rem; }
+.table { --bs-table-border-color: var(--py-border); }
+.modal-content { border: 1px solid var(--py-border); border-radius: .85rem; overflow: hidden; }
+#newsModal .modal-header { background: #203b4b !important; }
+
+/* Only the introductory section uses the landing-page treatment. */
+.home-hero {
+  position: relative;
+  padding: 2.25rem;
+  margin-top: .5rem;
+  border: 1px solid var(--py-border);
+  border-top: 4px solid var(--py-accent);
+  border-radius: .85rem;
+  background: linear-gradient(135deg, var(--py-accent-soft), var(--py-surface));
+}
+.home-hero .eyebrow { color: var(--py-accent); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .8rem; }
+.home-hero + section { margin-top: 2.25rem; }
+.home-hero h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin: 0 0 1rem; padding: 0; border: 0; }
+.home-hero .hero-lead { color: var(--py-muted); font-size: 1.08rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.hero-actions p { display: contents; }
+.hero-actions .btn { padding: .65rem 1.1rem; border-radius: .45rem; font-size: .9rem; font-weight: 600; }
+.hero-actions .btn-primary { background: var(--py-accent); border-color: var(--py-accent); color: #fff; }
+body.quarto-dark .hero-actions .btn-primary { color: #162b33; }
+.hero-actions .btn-outline-primary { border-color: var(--py-accent); color: var(--py-accent); }
+.hero-actions .btn:hover { filter: brightness(.94); }
+.hero-actions .btn-outline-primary:hover { background: var(--py-accent-soft); }
+.course-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; margin-block: 1.25rem 1.75rem; }
+.course-card { padding: 1rem 1.15rem; border: 1px solid var(--py-border); border-radius: .6rem; background: var(--py-surface); }
+.course-card p { margin: 0; font-size: .9rem; color: var(--py-muted); }
+.course-card p:first-child { color: var(--py-ink); font-weight: 650; margin-bottom: .25rem; }
+@media (max-width: 767px) {
+  .home-hero { padding: 1.4rem; }
+  .course-grid { grid-template-columns: 1fr; }
+  .navbar-brand { max-width: calc(100vw - 7rem); white-space: normal; font-size: .95rem; line-height: 1.3; }
+  main h1 { font-size: 1.9rem; }
+}
