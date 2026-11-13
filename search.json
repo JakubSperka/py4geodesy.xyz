@@ -108,11 +108,11 @@
     "href": "zadania/prog1/zadanie_3_1.html",
     "title": "📄 Zadanie 3 - 1. časť",
     "section": "",
-    "text": "Cez webové rozhranie Jupyter Lab vytvorte v počítači nový súbor s názvom Priezvisko.ipynb (Pre pomenovanie súboru použite Vaše priezvisko)\nPrvú (úvodnú) bunku dokumentu definujte ako typ Markdown cell a v tejto bunke uveďte nasledový kód a doplnte svoje údaje:\n# &lt;center&gt; Zadanie č. 3 &lt;/center&gt;\n### &lt;center&gt; Programovanie v jazyku Python &lt;/center&gt;\n_&lt;center&gt; (Programovanie) &lt;/center&gt;_ \n|__Meno__|__Krúžok__|__Šk. rok__|\n|:------:|:--------:|:---------:|\n|Meno Priezvisko|&lt;font color=red&gt;Kr.X&lt;/font&gt;|2025/2026|\nRiešte nasledovné úlohy:",
+    "text": "Cez webové rozhranie Jupyter Lab vytvorte v počítači nový súbor s názvom Priezvisko.ipynb (Pre pomenovanie súboru použite Vaše priezvisko)\nPrvú (úvodnú) bunku dokumentu definujte ako typ Markdown cell a v tejto bunke uveďte nasledovný kód a doplňte svoje údaje (červený text):\n# &lt;center&gt; Zadanie č. 3 &lt;/center&gt;\n### &lt;center&gt; Programovanie v jazyku Python &lt;/center&gt;\n_&lt;center&gt; (Programovanie 1) &lt;/center&gt;_ \n|__Meno__|__Krúžok__|__Šk. rok__|\n|:------:|:--------:|:---------:|\n|Meno Priezvisko|&lt;font color=red&gt;Kr.X&lt;/font&gt;|2026/2027|\nRiešte nasledovné úlohy:",
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄 Zadanie 3 - 1. časť"
     ]
   },
@@ -121,11 +121,11 @@
     "href": "zadania/prog1/zadanie_3_1.html#úvodné-nastavenia-jupyter-notebooku",
     "title": "📄 Zadanie 3 - 1. časť",
     "section": "",
-    "text": "Cez webové rozhranie Jupyter Lab vytvorte v počítači nový súbor s názvom Priezvisko.ipynb (Pre pomenovanie súboru použite Vaše priezvisko)\nPrvú (úvodnú) bunku dokumentu definujte ako typ Markdown cell a v tejto bunke uveďte nasledový kód a doplnte svoje údaje:\n# &lt;center&gt; Zadanie č. 3 &lt;/center&gt;\n### &lt;center&gt; Programovanie v jazyku Python &lt;/center&gt;\n_&lt;center&gt; (Programovanie) &lt;/center&gt;_ \n|__Meno__|__Krúžok__|__Šk. rok__|\n|:------:|:--------:|:---------:|\n|Meno Priezvisko|&lt;font color=red&gt;Kr.X&lt;/font&gt;|2025/2026|\nRiešte nasledovné úlohy:",
+    "text": "Cez webové rozhranie Jupyter Lab vytvorte v počítači nový súbor s názvom Priezvisko.ipynb (Pre pomenovanie súboru použite Vaše priezvisko)\nPrvú (úvodnú) bunku dokumentu definujte ako typ Markdown cell a v tejto bunke uveďte nasledovný kód a doplňte svoje údaje (červený text):\n# &lt;center&gt; Zadanie č. 3 &lt;/center&gt;\n### &lt;center&gt; Programovanie v jazyku Python &lt;/center&gt;\n_&lt;center&gt; (Programovanie 1) &lt;/center&gt;_ \n|__Meno__|__Krúžok__|__Šk. rok__|\n|:------:|:--------:|:---------:|\n|Meno Priezvisko|&lt;font color=red&gt;Kr.X&lt;/font&gt;|2026/2027|\nRiešte nasledovné úlohy:",
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄 Zadanie 3 - 1. časť"
     ]
   },
@@ -138,7 +138,7 @@
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄 Zadanie 3 - 1. časť"
     ]
   },
@@ -151,7 +151,7 @@
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄 Zadanie 3 - 1. časť"
     ]
   },
@@ -160,11 +160,11 @@
     "href": "zadania/prog1/zadanie_3_1.html#operátory-a-výpočty",
     "title": "📄 Zadanie 3 - 1. časť",
     "section": "3. Operátory a výpočty",
-    "text": "3. Operátory a výpočty\n\nKrokomer v prvý deň nameral: 12250 krokov tam a 8045 krokov späť.\nKrokomer v druhý deň nameral: 5450 krokov tam a 10500 krokov späť.\nDĺžka kroku je 95cm.\nVypočítajte:\n\ncelkový počet krokov a celkovú vzdialenosť v kilometroch prejdenú v jednotlivých dňoch,\nrozdiel medzi dĺžkou tam a späť v jednotlivých dňoch v metroch,\npriemerný celkový počet prejdených krokov a priemernú vzdialenosť v kilometroch prejdenú za 2 dni",
+    "text": "3. Operátory a výpočty\n\nKrokomer v prvý deň nameral: 12250 krokov tam a 8045 krokov späť.\nKrokomer v druhý deň nameral: 5450 krokov tam a 10500 krokov späť.\nDĺžka kroku je 84 cm.\nVypočítajte:\n\ncelkový počet krokov a celkovú vzdialenosť v kilometroch prejdenú v jednotlivých dňoch,\nrozdiel medzi dĺžkou tam a späť v jednotlivých dňoch v metroch,\npriemerný celkový počet prejdených krokov a priemernú vzdialenosť v kilometroch prejdenú za oba dni",
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄 Zadanie 3 - 1. časť"
     ]
   },
@@ -177,7 +177,7 @@
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄 Zadanie 3 - 1. časť"
     ]
   },
@@ -190,7 +190,7 @@
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄 Zadanie 3 - 1. časť"
     ]
   },
@@ -5426,7 +5426,7 @@
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄️ Zadanie 3 - 2. časť"
     ]
   },
@@ -5439,7 +5439,7 @@
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄️ Zadanie 3 - 2. časť"
     ]
   },
@@ -5448,11 +5448,11 @@
     "href": "zadania/prog1/zadanie_3_2.html#cykly",
     "title": "📄️ Zadanie 3 - 2. časť",
     "section": "5. Cykly",
-    "text": "5. Cykly\n\nVygenerujte všetky párne čísla od 0 do súčet dňa a mesiaca vášho narodenia + 20:\n\npomocou cyklu for,\npomocou cyklu while.\n\nZoznamy porovnajte.\n\n\n💡 Na porovnanie skúšte použiť relačný (porovnávací) operátor.",
+    "text": "5. Cykly\n\nVygenerujte všetky párne čísla od 0 do súčet dňa a mesiaca vášho narodenia + 33:\n\npomocou cyklu for,\npomocou cyklu while.\n\nZoznamy porovnajte.\n\n\n💡 Na porovnanie použite relačný (porovnávací) operátor.",
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄️ Zadanie 3 - 2. časť"
     ]
   },
@@ -5461,11 +5461,11 @@
     "href": "zadania/prog1/zadanie_3_2.html#podmienky",
     "title": "📄️ Zadanie 3 - 2. časť",
     "section": "6. Podmienky",
-    "text": "6. Podmienky\nS použitím podmienok if, elif a else vytvorte program, ktorý:\n\nProgram načíta vek používateľa a vypíše kategóriu:\n\n0–12 → dieťa,\n13–18 → tínedžer,\n19–64 → dospelý,\n65+ → senior.\n\n\n\n💡 Na načítanie veku používateľa skúšte použiť funkciu input().",
+    "text": "6. Podmienky\nS použitím podmienok if, elif a else vytvorte program, ktorý:\n\nProgram načíta vek používateľa a vypíše kategóriu:\n\n0–12 → dieťa,\n13–18 → tínedžer,\n19–64 → dospelý,\n65+ → senior.\n\n\n\n💡 Na načítanie veku používateľa použite funkciu input().",
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄️ Zadanie 3 - 2. časť"
     ]
   },
@@ -5474,11 +5474,11 @@
     "href": "zadania/prog1/zadanie_3_2.html#funkcie",
     "title": "📄️ Zadanie 3 - 2. časť",
     "section": "7. Funkcie",
-    "text": "7. Funkcie\nDefinujte nasledujúce vlastné funckie. Ich funkčnosť demonštrujte na vami zvolenom vhodnom príklade.\n\ninfo_sucet()\n\n📐 funkcia vypočíta súčet, minimum a maximum vstupného zoznamu čísel,\n📥 vstup: zoznam čísel (napr. dĺžky úsekov ciest),\n\n📥 výstup: súčet, minimum, maximum.\n\npriemer()\n\n📐 funkcia vypočíta jednoduchý aritmetický priemer zo zadaného zoznamu hodnôt,\n📥 vstup: zoznam čísel (napr. výšky),\n\n📥 výstup: medián.\n\nvazeny_priemer()\n\n📐 funkcia vypočíta vážený aritmetický priemer zo zadaného zoznamu hodnôt a váh,\n📥 vstup: zoznam hodnôt a zoznam váh (napr. známky a ich váhy),\n\n📥 výstup: vážený priemer.\n\nprevod_uhlov()\n\n📐 funkcia prevedie hodnotu uhla medzi grádmi a radianmi,\n\n⚙️ smer prevodu určí vstupný parameter funckie\n📥 vstup: hodnota uhla v grádoch alebo radiánoch a smer prevodu\n\n📥 výstup: prevedená hodnota uhla",
+    "text": "7. Funkcie\nDefinujte nasledujúce vlastné funkcie. Ich funkčnosť demonštrujte na vami zvolenom vhodnom príklade.\n\ninfo_sucet()\n\n📐 funkcia vypočíta súčet, minimum a maximum vstupného zoznamu čísel,\n📥 vstup: zoznam čísel (napr. dĺžky úsekov ciest),\n\n📤 výstup: súčet, minimum, maximum.\n\npriemer()\n\n📐 funkcia vypočíta jednoduchý aritmetický priemer zo zadaného zoznamu hodnôt,\n📥 vstup: zoznam čísel (napr. výšky),\n\n📤 výstup: aritmetický priemer.\n\nvazeny_priemer()\n\n📐 funkcia vypočíta vážený aritmetický priemer zo zadaného zoznamu hodnôt a váh,\n📥 vstup: zoznam hodnôt a zoznam váh (napr. známky a ich váhy),\n\n📤 výstup: vážený priemer.\n\nprevod_uhlov()\n\n📐 funkcia prevedie hodnotu uhla medzi grádmi a radianmi,\n\n⚙️ smer prevodu určí vstupný parameter funkcie\n📥 vstup: hodnota uhla v grádoch alebo radiánoch a smer prevodu\n\n📤 výstup: prevedená hodnota uhla",
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄️ Zadanie 3 - 2. časť"
     ]
   },
@@ -5487,11 +5487,11 @@
     "href": "zadania/prog1/zadanie_3_2.html#pokyny-k-odovzdaniu",
     "title": "📄️ Zadanie 3 - 2. časť",
     "section": "⚠️ Pokyny k odovzdaniu",
-    "text": "⚠️ Pokyny k odovzdaniu\nDo pripraveného miesta odovzdania v AIS vložte súbor v arhvíve .zip s názvom priezvisko.zip\nOdovzdaný archív bude obsahovať:\n\nPriezvisko.ipynb\n\nRiešenie jednotlivých úloh\nVhodný popis ich riešenia v textových bunkách\n\nPriezvisko.pdf\n\nPDF súbor sa skladá z:\n\nVyplnenej úvodnej tabuľky\nZadávacích hárkov s doplneným menom študenta\nPDF vytlačeného zo súboru Priezvisko.ipynb\nDátum a miesto vypracoania s menom a podpisom\n\n\n\n\n💡️ Úvodná tabuľka a zadávacie hárky sú dostupné na dokumentovom serveri.\n⚠️ Súbor nezabudnite správne vložiť a potvrdiť jeho odovzdanie.",
+    "text": "⚠️ Pokyny k odovzdaniu\nDo pripraveného miesta odovzdania v AIS vložte súbor v archíve .zip s názvom priezvisko.zip\nOdovzdaný archív bude obsahovať:\n\nPriezvisko.ipynb\n\nRiešenie jednotlivých úloh\nVhodný popis ich riešenia v textových bunkách\n\nPriezvisko.pdf\n\nPDF súbor sa skladá z:\n\nVyplnenej úvodnej tabuľky\nZadávacích hárkov s doplneným menom študenta\nPDF vytlačeného zo súboru Priezvisko.ipynb\nDátum a miesto vypracovania s menom a podpisom\n\n\n\n\n💡️ Úvodná tabuľka a zadávacie hárky sú dostupné na dokumentovom serveri.\n⚠️ Súbor nezabudnite správne vložiť a potvrdiť jeho odovzdanie.",
     "crumbs": [
       "🏡 Domov",
       "💻 Programovanie 1",
-      "📒 Zadania cvičení (2025/2026)",
+      "📒 Zadania cvičení (2026/2027)",
       "📄️ Zadanie 3 - 2. časť"
     ]
   }
